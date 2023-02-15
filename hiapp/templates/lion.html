@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%load static%}
+    <link rel="stylesheet" href="{%static '/css/1.css'%}">
+    <script src="{%static 'js/1.js'%}"></script>
+    
+</head>
+<body>
+    <h1>welcome to itdesk</h1>
+    <input type="button" value="next" onclick="hello()">
+    <img src="{% static 'image/{{a}}.jpg'%}" alt="sorry" srcset="">
+    <form >
+        {%csrf_token%}
+        <table>
+            <thead>
+                <tr><th>name</th><th>username</th><th>password</th><th>contactno</th><th>edit</th><th>delete</th></tr>
+            </thead>
+            <tbody>
+                {% for i in aaa %}
+                <tr><td>{{i.name}}</td><td>{{i.username}}</td><td>{{i.password}}</td><td>{{i.contactno}}</td><td><a href="edit/{{i.username}}">edit</a></td><td><a href="/delete/{{i.username}}">delete</a></td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </form>
+</body>
+</html>

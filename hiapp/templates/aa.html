@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/aa.css' %}">
+</head>
+<body>
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+        <tr><td>name</td><td><input type="text" name="name"></td></tr>
+        <tr><td>username</td><td><input type="text" name="username"><span id="a">{{a}}</span></td></tr>
+        <tr><td>password</td><td><input type="text" name="password"></td></tr>
+        <tr><td>contactno</td><td><input type="text" name="contactno"></td></tr>
+    <tr><td></td><td><input type="submit" value="next"></td></tr>
+</table>
+    </form>
+    <a href="a/">next</a>
+    <a href="a/to">nextafter</a>
+    
+</body>
+</html>
